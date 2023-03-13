@@ -3,6 +3,7 @@ dotenv.config();
 
 import { Configuration, OpenAIApi } from 'openai';
 
+const port = process.env.PORT || 8080;
 const configuration = new Configuration({
   apiKey: process.env.OPENAI,
 });
@@ -34,4 +35,4 @@ app.post('/dream', async (req, res) => {
   }
 });
 
-app.listen(8080, () => console.log('make art on http://localhost:8080/dream'));
+app.listen(port, () => console.log(`make art on http://localhost:${port}/dream`));
