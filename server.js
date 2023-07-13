@@ -5,7 +5,7 @@ import { Configuration, OpenAIApi } from 'openai';
 
 const port = process.env.PORT || 8080;
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: process.env.OPENAI,
 });
 
 const openai = new OpenAIApi(configuration);
